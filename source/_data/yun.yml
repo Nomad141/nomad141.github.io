@@ -1,0 +1,113 @@
+mode: auto
+
+banner:
+  title: 诺曼の妙♂妙♂屋
+
+
+social:
+  - name: 这是个没有用的RSS链接
+    # set rss in your root config
+    # https://github.com/hexojs/hexo-generator-feed
+    link: 
+    icon: icon-rss-line
+    color: orange
+  - name: 同志，天冷了，进来坐坐吧！
+    # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
+    link: https://qm.qq.com/cgi-bin/qm/qr?k=TvaLA-0Xvl4hTorbLfJFbBas47ealBBb&jump_from=webapi
+    icon: icon-qq-line
+    color: "#12B7F5"
+  - name: 俺的GayHub主页
+    link: https://github.com/Nomad141
+    icon: icon-github-line
+    color: "#6e5494"
+  - name: 只有抽奖的个人微博
+    link: https://weibo.com/Nomad141
+    icon: icon-weibo-line
+    color: "#E6162D"
+ # - name: 还没有开的豆瓣
+ #   link: 
+ #   icon: icon-douban-line
+ #   color: "#007722"
+  - name: 我的网抑云
+    link: https://music.163.com/#/user/home?id=79780917
+    icon: icon-netease-cloud-music-line
+    color: "#C20C0C"
+  - name: 和我分享你刚编的故事
+    link: https://www.zhihu.com/people/nomad141
+    icon: icon-zhihu-line
+    color: "#0084FF"
+  - name: 叔叔我啊。。。
+    link: https://space.bilibili.com/16439117
+    icon: icon-bilibili-line
+    color: "#FF8EB3"
+  # - name: POPI
+  #   link: https://www.popiapp.cn/elpsycn
+  #   icon: icon-questionnaire-line
+  #   color: "#525252"
+  #- name: 微信公众号
+  #  link: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/about/white-qrcode-and-search.jpg
+  #  icon: icon-wechat-2-line
+  #  color: "#1AAD19"
+  #- name: 小蓝鸟
+  #  link: https://twitter.com/YunYouJun
+  #  icon: icon-twitter-line
+  #  color: "#1da1f2"
+  # - name: Telegram
+  #   link: https://t.me/YunYouJun
+  #   icon: icon-telegram-line
+  #   color: "#0088CC"
+  #- name: Telegram Channel
+  #  link: https://t.me/elpsycn
+  #  # icon: icon-telegram-fill
+  #  icon: icon-telegram-line
+  #  color: "#0088CC"
+  - name: 依妹儿
+    link: nomad.1416@gmail.com
+    icon: icon-mail-line
+    color: "#8E71C1"
+  - name: 开往随机博客
+    link: https://travellings.link
+    icon: icon-train-line
+    color: "#0084FF"
+
+pages:
+  - name: 我的小伙伴们-欢迎在群内多多和我击♂剑
+    url: 
+    icon: icon-genderless-line
+    color: dodgerblue
+
+reward:
+  enable: false
+
+avatar:
+  enable: true
+  url: /images/01.jpg
+  # If true, the avatar would be dispalyed in circle.
+  rounded: true
+  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+  opacity: 1
+  mickey_mouse: false
+  status:
+    enable: true
+    emoji: ❀
+    message: 世界灿烂如故。
+
+notice:
+  enable: true
+  content: Thanks for being in my life.
+
+bg_image:
+  enable: true
+  url: /backgroundimages/IMG_6162(20210704-131438).JPG
+  dark: /backgroundimages/IMG_6170(20210704-131438).JPG
+  opacity: 0.8
+
+engine_search:
+  enable: false
+
+local_search:
+  enable: true
+  src: /js/search/local-search.js
+
+title: 诺曼妙妙屋
+author: Nomad141
