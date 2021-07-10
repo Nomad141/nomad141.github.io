@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>记录我的第一次博客搭建</title>
+      <link href="/2021/07/10/deploymyblog/"/>
+      <url>/2021/07/10/deploymyblog/</url>
+      
+        <content type="html"><![CDATA[<p>妹有银是不会踩坑滴</p><span id="more"></span><h2 id="为什么我想要做一个博客"><a href="#为什么我想要做一个博客" class="headerlink" title="为什么我想要做一个博客"></a>为什么我想要做一个博客</h2><p>主要是记录生活（文艺复兴）和记录技术文章。其实在大学四年里我反而最需要这么一个可以集中放置技术文章的地方，但是那会我反而忘了这茬，很多参考资料也找不到了。所以我觉得趁着自己还没有正式参加工作，赶紧把部署做好，以后什么都可以往这里写了。</p><blockquote><p>当然还可以显得很专业（bushi</p></blockquote><h2 id="准备？"><a href="#准备？" class="headerlink" title="准备？"></a>准备？</h2><p>本次的搭建根据云游君撰写的教程<a href="https://www.yunyoujun.cn/share/how-to-build-your-site/" title="Markdown">yunyoujun-教你如何从零开始搭建一个属于自己的网站</a>进行。同样hexo模板也来自于云游君。（便携小空调yyds）<br>因此前期工作和部署测试其实均是比较顺利的，真正的问题或者说踩坑发生在尝试进行自动部署的时候。</p><h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><h3 id="尝试直接使用yunyoujun的自动部署脚本-无法部署"><a href="#尝试直接使用yunyoujun的自动部署脚本-无法部署" class="headerlink" title="尝试直接使用yunyoujun的自动部署脚本-无法部署"></a>尝试直接使用yunyoujun的自动部署脚本-无法部署</h3><p>云游君在教程中表示可以直接使用他的yml文件-<a href="https://github.com/YunYouJun/yunyoujun.github.io/blob/hexo/.github/workflows/gh-pages.yml" title="Markdown">pg-pages.yml</a>,稍加修改即可。<br>文件代码如下。</p><pre><code>    name: GitHub Pageson:push:    branches:    - hexojobs:deploy:    runs-on: ubuntu-latest    steps:    - uses: actions/checkout@v2        with:        submodules: true    - name: Setup Node        uses: actions/setup-node@v2        with:        node-version: &quot;14.x&quot;    - run: yarn    - name: algolia        env:        HEXO_ALGOLIA_INDEXING_KEY: $&#123;&#123; secrets.HEXO_ALGOLIA_INDEXING_KEY &#125;&#125;        run: yarn algolia    - run: yarn build    - name: Deploy        uses: peaceiris/actions-gh-pages@v3        with:        github_token: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;        publish_dir: ./public        publish_branch: master        force_orphan: true</code></pre><p>原教程中表示去掉<code>algolia</code>部分即可使用。但是我在尝试后，github提示workflow失败，构建出错。<br><img src="https://i.loli.net/2021/07/10/n2DEpRIzdZWGQ48.png" alt="error1_info" loading="lazy"><em>上传到github后的wordflow错误提示</em><br>查看报错信息，为我们指向了<code>.gitmodules</code>文件，也就是github的submodules功能。<br><img src="https://i.loli.net/2021/07/10/Clv9eFgOM2oDiH5.png" alt="error2_info" loading="lazy"><br>按照云游君的说法，我尝试对<code>.gitmodules</code>文件整体复制，也尝试了搜索到的各种方法。但是无一例外都无法改变执行失败的结果。由于我对github的一知半解，加上并没有使用过workflow文件，这个问题只有暂时留到后续解决了。</p><h3 id="尝试按照其他教程-NTR？！"><a href="#尝试按照其他教程-NTR？！" class="headerlink" title="尝试按照其他教程-NTR？！"></a>尝试按照其他教程-NTR？！</h3><p>在尝试失败后我把目光转向了云游君文章中的外链<a href="https://blog.ichr.me/post/automated-deployment-of-serverless-static-blog/" title="Markdown">初探无后端静态博客自动化部署方案</a>。这位博主较为详细的解释了GitHub Actions的工作原理和机制，并且同样给出了自己的对应文件。他的代码如下：</p><pre><code>name: Hexo Deploy Automaticallyon: [push]jobs:build:    runs-on: ubuntu-latest        strategy:    matrix:        node-version: [12.x]    steps:    - name: Checkout        uses: actions/checkout@v2            - name: Use Node.js $&#123;&#123; matrix.node-version &#125;&#125;        uses: actions/setup-node@v1        with:        node-version: $&#123;&#123; matrix.node-version &#125;&#125;        - name: Generate        run: |        npm i &amp;&amp; npx hexo g        - name: Deploy        uses: peaceiris/actions-gh-pages@v3        with:        github_token: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;        publish_branch: gh-pages        publish_dir: ./public        cname: blog.ichr.me        force_orphan: true</code></pre><p>我尝试修改了其中我能看懂的部分，配置了github的公钥和私钥。这次的运行成功完成了。<br><em>然后我就被NTR了？！</em><br>当我再次尝试使用<code>nomad41.github.io</code>也就是我的链接访问博客后，我惊讶的发现我的博客地址会自动跳转到这位博主的首页。这下大条了————我查看了我的github仓库中的<code>master</code>分支，发现分支内存放的果然变成了陌生的内容-我把这位博主的博客给用自己的域名部署了一遍。。。</p><h3 id="尝试恢复"><a href="#尝试恢复" class="headerlink" title="尝试恢复"></a>尝试恢复</h3><p>在发现问题后，我尝试彻底删除了<code>master</code>分支，重新进行部署，尝试了删除<code>hexo</code>分支，重新push并重新部署。均无果，我的url访问仍然会指向这位博主的首页。<br>这时候我已经有点纳闷了————这件事显得有些邪乎，当我的<code>master</code>分支已经不存在那个博客的生成网页后，为什么我还可以用这个url访问到它呢？<br>于是我彻底删除了<code>nomad141.github.io</code>这个代码仓库，并且重建，重新部署。<br>问题依旧。<br>于是我掏出手机访问了<code>nomad141.github.io</code>，发现它正常的指向了我的主页。<br>这就有点糟心了。<br>由于我的计算机通信网络知识并不咋地，所以只能闭着眼撞。在尝试删除cookie、尝试在host文件中直接添加对这个域名的访问，重置ip等一系列操作未果后，我只能将矛头转向申请新的域名这点。这次的域名覆盖也就成了未解之谜————希望随着知识的丰富我可以给出正确的解释和解决方案。</p><h2 id="认栽，换域名"><a href="#认栽，换域名" class="headerlink" title="认栽，换域名"></a>认栽，换域名</h2><p>经过一晚上的折腾后我决定歇逼，转而使用一个新的域名来访问我的博客主页。<br>于是我到tx云购买了这个域名————第一年一块钱，甚至不够你吃包辣条。</p><h3 id="将github-pages定向到tx云的域名"><a href="#将github-pages定向到tx云的域名" class="headerlink" title="将github pages定向到tx云的域名"></a>将github pages定向到tx云的域名</h3><blockquote><p>这个过程非常简单，网上能找到许多教程。这里仅作总结。</p></blockquote><p>首先完成tx云的实名认证。这个认证有两层-在注册产品时需要一层，而在使用DNS解析服务的时候又需要一次认证。完成以后就可以配置DNS解析服务了。<br>进入腾讯云的DNSPOD控制台，找到左侧DNS解析-我的域名。记录管理里会有两条NS类型的默认记录，不需要更改。<br>点击添加记录。这里需要添加两条。在“主机记录”一栏，分别选择<code>@</code>和<code>WWW</code>，然后“记录类型”选择<code>A</code>或者<code>CNAME</code>。若选择<code>A</code>，需在记录值一栏填入<code>对应名.github.io</code>的ip地址（在cmd中ping即可获得），而选择<code>CNAME</code>只要填入域名<code>对应名.github.io</code>本身即可。当然也可以使用“快速添加解析”功能，只要提供ip地址即可快速添加两条A类型解析。<br>确认解析正常工作后，进入github的代码仓库。点击<code>Settings</code>标签，往下拉找到<code>pages</code>，进入GitHub Pages的设置页面。<br>找到<code>Custom domain</code>这个设置项，填入你购买的域名————注意，这里不需要www之类的前缀。直接填写即可。<br>等待github pages完成配置。即看到绿色的提示：<br><img src="https://i.loli.net/2021/07/10/q75raPyp3IXeY1B.png" alt="hint_green" loading="lazy"><em>配置成功</em><br>代表你已经可以使用购买的域名访问博客了。<br><code>Custom domain</code>项会检查你的域名，并且在底下给出相应的信息。不知道为何，这里提示红色且有DNS错误的提示时不影响访问。猜测是DNS服务器需要等待来完成分配。另外，这里还会提示使用了ip地址而非CNAME来定向网页之类的警告，请酌情进行改进。</p><blockquote><p>在设置Custom domain项目后，github会在部署的分支下自动生成CNAME文件。你也可以手动在hexo目录的source底下新建一个无拓展名的CNAME文件存放域名，但是有可能产生问题。</p></blockquote><h3 id="未解之谜"><a href="#未解之谜" class="headerlink" title="未解之谜"></a>未解之谜</h3><p>为什么我的域名会被自动跳转？为什么workflow脚本无法正常执行？workflow的详细语法是什么？这些都需要我进一步的学习尝试后再更新本文。</p><h2 id="反思总结"><a href="#反思总结" class="headerlink" title="反思总结"></a>反思总结</h2><p>一番折腾下来算是完成了博客的基本搭建，可以使用基本功能了。云游君的文档写的已经很细致，只要稍微有一点点开发基础即可顺利阅读。<br>但是自己带来的问题依然没有解决方案。不过这次接触到的<code>github pages</code>、<code>workflow</code>、<code>hexo</code>等等技术对我来说依然是全新的领域。需要进一步的学习。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 诺曼の生活经验 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活记录 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/07/09/hello-world/"/>
       <url>/2021/07/09/hello-world/</url>

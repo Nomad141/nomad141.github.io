@@ -71,8 +71,8 @@ social:
     color: "#0084FF"
 
 pages:
-  - name: 我的小伙伴-欢迎在群内多多和我击♂剑
-    url: 
+  - name: 其他很有精神的老大哥们！
+    url: /links/
     icon: icon-genderless-line
     color: dodgerblue
 
@@ -111,3 +111,12 @@ local_search:
 
 title: 诺曼妙妙屋
 author: Nomad141
+
+codeblock:
+  copy_btn: true
+  prismjs:
+    light: default
+    dark: tomorrow
+
+wordcloud:
+  enable: true

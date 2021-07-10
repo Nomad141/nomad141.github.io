@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="Nomad141"><meta name="copyright" content="Nomad141"><meta name="generator" content="Hexo 5.4.0"><meta name="theme" content="hexo-theme-yun"><title>记录我的第一次博客搭建 | 诺曼妙妙屋</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.1.25/dist/yun/yun-markdown.min.css"><script src="//at.alicdn.com/t/font_1140697_dxory92pb0h.js" async></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>document.addEventListener("DOMContentLoaded", () => {
+  [".post-card",".post-content img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+});
+</script><link id="light-prism-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@latest/themes/prism.css" media="(prefers-color-scheme: light)"><link id="dark-prism-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@latest/themes/prism-tomorrow.css" media="(prefers-color-scheme: dark)"><link rel="icon" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="alternate icon" href="/yun.ico"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">
+    const Yun = window.Yun || {};
+    window.CONFIG = {"hostname":"example.com","root":"/","title":"诺曼の妙♂妙♂屋","version":"1.6.1","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"local_search":{"path":"/search.xml"},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/utils.js"></script><script src="/js/hexo-theme-yun.js"></script><meta name="description" content="对第一次博客搭建踩坑的相关记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录我的第一次博客搭建">
+<meta property="og:url" content="http://example.com/2021/07/10/deploymyblog/index.html">
+<meta property="og:site_name" content="诺曼妙妙屋">
+<meta property="og:description" content="对第一次博客搭建踩坑的相关记录">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/07/10/n2DEpRIzdZWGQ48.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/10/Clv9eFgOM2oDiH5.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/10/q75raPyp3IXeY1B.png">
+<meta property="article:published_time" content="2021-07-10T05:38:39.000Z">
+<meta property="article:modified_time" content="2021-07-10T07:08:28.158Z">
+<meta property="article:author" content="Nomad141">
+<meta property="article:tag" content="生活记录">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/10/n2DEpRIzdZWGQ48.png"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Nomad141"><img width="96" loading="lazy" src="/images/01.jpg" alt="Nomad141"><span class="site-author-status" title="世界灿烂如故。">❀</span></a><div class="site-author-name"><a href="/about/">Nomad141</a></div><span class="site-name">诺曼妙妙屋</span><sub class="site-subtitle"></sub><div class="site-desciption"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">2</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">1</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">3</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-settings-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" title="这是个没有用的RSS链接" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=TvaLA-0Xvl4hTorbLfJFbBas47ealBBb&amp;jump_from=webapi" title="同志，天冷了，进来坐坐吧！" target="_blank" style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/Nomad141" title="俺的GayHub主页" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://weibo.com/Nomad141" title="只有抽奖的个人微博" target="_blank" style="color:#E6162D"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weibo-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=79780917" title="我的网抑云" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/nomad141" title="和我分享你刚编的故事" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/16439117" title="叔叔我啊。。。" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="nomad.1416@gmail.com" title="依妹儿" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://travellings.link" title="开往随机博客" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-train-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="其他很有精神的老大哥们！" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%83%B3%E8%A6%81%E5%81%9A%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.</span> <span class="toc-text">为什么我想要做一个博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">准备？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B8%A9%E5%9D%91"><span class="toc-number">3.</span> <span class="toc-text">踩坑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8yunyoujun%E7%9A%84%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC-%E6%97%A0%E6%B3%95%E9%83%A8%E7%BD%B2"><span class="toc-number">3.1.</span> <span class="toc-text">尝试直接使用yunyoujun的自动部署脚本-无法部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E6%8C%89%E7%85%A7%E5%85%B6%E4%BB%96%E6%95%99%E7%A8%8B-NTR%EF%BC%9F%EF%BC%81"><span class="toc-number">3.2.</span> <span class="toc-text">尝试按照其他教程-NTR？！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E6%81%A2%E5%A4%8D"><span class="toc-number">3.3.</span> <span class="toc-text">尝试恢复</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A4%E6%A0%BD%EF%BC%8C%E6%8D%A2%E5%9F%9F%E5%90%8D"><span class="toc-number">4.</span> <span class="toc-text">认栽，换域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86github-pages%E5%AE%9A%E5%90%91%E5%88%B0tx%E4%BA%91%E7%9A%84%E5%9F%9F%E5%90%8D"><span class="toc-number">4.1.</span> <span class="toc-text">将github pages定向到tx云的域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C"><span class="toc-number">4.2.</span> <span class="toc-text">未解之谜</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E6%80%9D%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">反思总结</span></a></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://example.com/2021/07/10/deploymyblog/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Nomad141"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="诺曼妙妙屋"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">记录我的第一次博客搭建</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="Created: 2021-07-10 13:38:39" itemprop="dateCreated datePublished" datetime="2021-07-10T13:38:39+08:00">2021-07-10</time></div><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E8%AF%BA%E6%9B%BC%E3%81%AE%E7%94%9F%E6%B4%BB%E7%BB%8F%E9%AA%8C/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">诺曼の生活经验</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">生活记录</span></a><a class="tag-item" href="/tags/%E6%8A%80%E6%9C%AF/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">技术</span></a><a class="tag-item" href="/tags/github/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">github</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7;"><p>妹有银是不会踩坑滴</p>
+<span id="more"></span>
+<h2 id="为什么我想要做一个博客"><a href="#为什么我想要做一个博客" class="headerlink" title="为什么我想要做一个博客"></a>为什么我想要做一个博客</h2><p>主要是记录生活（文艺复兴）和记录技术文章。其实在大学四年里我反而最需要这么一个可以集中放置技术文章的地方，但是那会我反而忘了这茬，很多参考资料也找不到了。所以我觉得趁着自己还没有正式参加工作，赶紧把部署做好，以后什么都可以往这里写了。</p>
+<blockquote>
+<p>当然还可以显得很专业（bushi</p>
+</blockquote>
+<h2 id="准备？"><a href="#准备？" class="headerlink" title="准备？"></a>准备？</h2><p>本次的搭建根据云游君撰写的教程<a target="_blank" rel="noopener" href="https://www.yunyoujun.cn/share/how-to-build-your-site/" title="Markdown">yunyoujun-教你如何从零开始搭建一个属于自己的网站</a>进行。同样hexo模板也来自于云游君。（便携小空调yyds）<br>因此前期工作和部署测试其实均是比较顺利的，真正的问题或者说踩坑发生在尝试进行自动部署的时候。</p>
+<h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><h3 id="尝试直接使用yunyoujun的自动部署脚本-无法部署"><a href="#尝试直接使用yunyoujun的自动部署脚本-无法部署" class="headerlink" title="尝试直接使用yunyoujun的自动部署脚本-无法部署"></a>尝试直接使用yunyoujun的自动部署脚本-无法部署</h3><p>云游君在教程中表示可以直接使用他的yml文件-<a target="_blank" rel="noopener" href="https://github.com/YunYouJun/yunyoujun.github.io/blob/hexo/.github/workflows/gh-pages.yml" title="Markdown">pg-pages.yml</a>,稍加修改即可。<br>文件代码如下。</p>
+<pre><code>    name: GitHub Pages
+on:
+push:
+    branches:
+    - hexo
+jobs:
+deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+        with:
+        submodules: true
+
+    - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+        node-version: &quot;14.x&quot;
+
+    - run: yarn
+    - name: algolia
+        env:
+        HEXO_ALGOLIA_INDEXING_KEY: $&#123;&#123; secrets.HEXO_ALGOLIA_INDEXING_KEY &#125;&#125;
+        run: yarn algolia
+    - run: yarn build
+
+    - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+        github_token: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;
+        publish_dir: ./public
+        publish_branch: master
+        force_orphan: true
+</code></pre>
+<p>原教程中表示去掉<code>algolia</code>部分即可使用。但是我在尝试后，github提示workflow失败，构建出错。<br><img src="https://i.loli.net/2021/07/10/n2DEpRIzdZWGQ48.png" alt="error1_info" loading="lazy"><em>上传到github后的wordflow错误提示</em><br>查看报错信息，为我们指向了<code>.gitmodules</code>文件，也就是github的submodules功能。<br><img src="https://i.loli.net/2021/07/10/Clv9eFgOM2oDiH5.png" alt="error2_info" loading="lazy"><br>按照云游君的说法，我尝试对<code>.gitmodules</code>文件整体复制，也尝试了搜索到的各种方法。但是无一例外都无法改变执行失败的结果。由于我对github的一知半解，加上并没有使用过workflow文件，这个问题只有暂时留到后续解决了。</p>
+<h3 id="尝试按照其他教程-NTR？！"><a href="#尝试按照其他教程-NTR？！" class="headerlink" title="尝试按照其他教程-NTR？！"></a>尝试按照其他教程-NTR？！</h3><p>在尝试失败后我把目光转向了云游君文章中的外链<a target="_blank" rel="noopener" href="https://blog.ichr.me/post/automated-deployment-of-serverless-static-blog/" title="Markdown">初探无后端静态博客自动化部署方案</a>。这位博主较为详细的解释了GitHub Actions的工作原理和机制，并且同样给出了自己的对应文件。他的代码如下：</p>
+<pre><code>name: Hexo Deploy Automatically
+
+on: [push]
+
+jobs:
+build:
+
+    runs-on: ubuntu-latest
+    
+    strategy:
+    matrix:
+        node-version: [12.x]
+
+    steps:
+    - name: Checkout
+        uses: actions/checkout@v2
+        
+    - name: Use Node.js $&#123;&#123; matrix.node-version &#125;&#125;
+        uses: actions/setup-node@v1
+        with:
+        node-version: $&#123;&#123; matrix.node-version &#125;&#125;
+    
+    - name: Generate
+        run: |
+        npm i &amp;&amp; npx hexo g
+    
+    - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+        github_token: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;
+        publish_branch: gh-pages
+        publish_dir: ./public
+        cname: blog.ichr.me
+        force_orphan: true
+</code></pre>
+<p>我尝试修改了其中我能看懂的部分，配置了github的公钥和私钥。这次的运行成功完成了。<br><em>然后我就被NTR了？！</em><br>当我再次尝试使用<code>nomad41.github.io</code>也就是我的链接访问博客后，我惊讶的发现我的博客地址会自动跳转到这位博主的首页。这下大条了————我查看了我的github仓库中的<code>master</code>分支，发现分支内存放的果然变成了陌生的内容-我把这位博主的博客给用自己的域名部署了一遍。。。</p>
+<h3 id="尝试恢复"><a href="#尝试恢复" class="headerlink" title="尝试恢复"></a>尝试恢复</h3><p>在发现问题后，我尝试彻底删除了<code>master</code>分支，重新进行部署，尝试了删除<code>hexo</code>分支，重新push并重新部署。均无果，我的url访问仍然会指向这位博主的首页。<br>这时候我已经有点纳闷了————这件事显得有些邪乎，当我的<code>master</code>分支已经不存在那个博客的生成网页后，为什么我还可以用这个url访问到它呢？<br>于是我彻底删除了<code>nomad141.github.io</code>这个代码仓库，并且重建，重新部署。<br>问题依旧。<br>于是我掏出手机访问了<code>nomad141.github.io</code>，发现它正常的指向了我的主页。<br>这就有点糟心了。<br>由于我的计算机通信网络知识并不咋地，所以只能闭着眼撞。在尝试删除cookie、尝试在host文件中直接添加对这个域名的访问，重置ip等一系列操作未果后，我只能将矛头转向申请新的域名这点。这次的域名覆盖也就成了未解之谜————希望随着知识的丰富我可以给出正确的解释和解决方案。</p>
+<h2 id="认栽，换域名"><a href="#认栽，换域名" class="headerlink" title="认栽，换域名"></a>认栽，换域名</h2><p>经过一晚上的折腾后我决定歇逼，转而使用一个新的域名来访问我的博客主页。<br>于是我到tx云购买了这个域名————第一年一块钱，甚至不够你吃包辣条。</p>
+<h3 id="将github-pages定向到tx云的域名"><a href="#将github-pages定向到tx云的域名" class="headerlink" title="将github pages定向到tx云的域名"></a>将github pages定向到tx云的域名</h3><blockquote>
+<p>这个过程非常简单，网上能找到许多教程。这里仅作总结。</p>
+</blockquote>
+<p>首先完成tx云的实名认证。这个认证有两层-在注册产品时需要一层，而在使用DNS解析服务的时候又需要一次认证。完成以后就可以配置DNS解析服务了。<br>进入腾讯云的DNSPOD控制台，找到左侧DNS解析-我的域名。记录管理里会有两条NS类型的默认记录，不需要更改。<br>点击添加记录。这里需要添加两条。在“主机记录”一栏，分别选择<code>@</code>和<code>WWW</code>，然后“记录类型”选择<code>A</code>或者<code>CNAME</code>。若选择<code>A</code>，需在记录值一栏填入<code>对应名.github.io</code>的ip地址（在cmd中ping即可获得），而选择<code>CNAME</code>只要填入域名<code>对应名.github.io</code>本身即可。当然也可以使用“快速添加解析”功能，只要提供ip地址即可快速添加两条A类型解析。<br>确认解析正常工作后，进入github的代码仓库。点击<code>Settings</code>标签，往下拉找到<code>pages</code>，进入GitHub Pages的设置页面。<br>找到<code>Custom domain</code>这个设置项，填入你购买的域名————注意，这里不需要www之类的前缀。直接填写即可。<br>等待github pages完成配置。即看到绿色的提示：<br><img src="https://i.loli.net/2021/07/10/q75raPyp3IXeY1B.png" alt="hint_green" loading="lazy"><em>配置成功</em><br>代表你已经可以使用购买的域名访问博客了。<br><code>Custom domain</code>项会检查你的域名，并且在底下给出相应的信息。不知道为何，这里提示红色且有DNS错误的提示时不影响访问。猜测是DNS服务器需要等待来完成分配。另外，这里还会提示使用了ip地址而非CNAME来定向网页之类的警告，请酌情进行改进。</p>
+<blockquote>
+<p>在设置Custom domain项目后，github会在部署的分支下自动生成CNAME文件。你也可以手动在hexo目录的source底下新建一个无拓展名的CNAME文件存放域名，但是有可能产生问题。</p>
+</blockquote>
+<h3 id="未解之谜"><a href="#未解之谜" class="headerlink" title="未解之谜"></a>未解之谜</h3><p>为什么我的域名会被自动跳转？为什么workflow脚本无法正常执行？workflow的详细语法是什么？这些都需要我进一步的学习尝试后再更新本文。</p>
+<h2 id="反思总结"><a href="#反思总结" class="headerlink" title="反思总结"></a>反思总结</h2><p>一番折腾下来算是完成了博客的基本搭建，可以使用基本功能了。云游君的文档写的已经很细致，只要稍微有一点点开发基础即可顺利阅读。<br>但是自己带来的问题依然没有解决方案。不过这次接触到的<code>github pages</code>、<code>workflow</code>、<code>hexo</code>等等技术对我来说依然是全新的领域。需要进一步的学习。</p>
+</div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>Nomad141</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://example.com/2021/07/10/deploymyblog/" title="记录我的第一次博客搭建">http://example.com/2021/07/10/deploymyblog/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></section></article><div class="post-nav"><div class="post-nav-item"></div><div class="post-nav-item"><a class="post-nav-next" href="/2021/07/09/hello-world/" rel="next" title="Hello World"><span class="post-nav-text">Hello World</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>要不要和我说些什么？</span><br></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2021 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Nomad141</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v5.4.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.6.1</span></div></footer><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="Search"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-search-line"></use></svg></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script src="/js/search/local-search.js" defer></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-close-line"></use></svg></span></div><div class="search-input-container"><input class="search-input" id="local-search-input" type="text" placeholder="Searching..." value=""></div><div id="local-search-result"></div></div></div></body></html>
